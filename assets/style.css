@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/* nav  */
+.nav-container{
+    position: fixed;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 0.3rem;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+.nav-container #g-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #0287D0;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-container .nav-menu{
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+}
+
+.nav-container ul{
+    display: flex;
+    gap: 1.2rem;
+    margin-right: 0.5rem;
+    list-style: none;
+}
+.nav-container ul li a{
+    font-weight: 600;
+    text-decoration: none;
+    
+    color: #3D3D3D;
+    font-size: 0.9rem;
+    transition: all 300ms ease-in-out;
+}
+.nav-container ul li a:hover{
+    color: #242424;
+    border-bottom: 1px solid #242424;
+}
+
+
+/* main */
+
+section{
+
+    height: 100vh;
+}
+
+.main-container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-container .google-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16rem;
+}
+.main-search .input-container{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #DFE1E5;
+    border-radius: 30px;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 8px;
+    padding-bottom: 3px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.main-search .searchbar{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    width: 25rem;
+    padding: 0.7rem;
+    border: none;
+    outline: none;
+}
+.input-container i{
+    font-size: 18px;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #acadb1;
+}
+.input-container #glass{
+    font-size: 14px;
+    margin-left: 6px;
+    margin-bottom: 5px;
+}
+.search-boxes{
+    display: flex;
+    margin-top: 14px;
+    gap: 15px;
+}
+button{
+    padding: 9px 16px;
+    background-color: #F8F9FA;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+}
+button:hover{
+    box-shadow: 0.2px 2px 3px #cbcdd1;
+}
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f2f2f2;
+    padding: 8px 0px;
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+}
+.line{
+    border: 1px solid rgba(0,0,0,0.1)
+}
+.top-footer{
+    display: flex;
+    justify-content: space-between;
+    color: #808589;
+    margin: 10px 30px;
+    font-size: 0.9rem;
+}
+.bottom-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 35px;
+    font-size: 0.9rem;
+}
+.bottom-footer ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+.bottom-footer ul a{
+    text-decoration: none;
+    color: #808589;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.bottom-footer ul a:hover{
+   color: #808589;
+   border-bottom: 1px solid #808589;
+}
+
+@media only screen and (max-width: 800px){
+
+    .bottom-footer ul{
+        list-style: none;
+        display: flex;
+        gap: 17px;
+        font-size: 13px;
+    }
+
+}
+
+@media only screen and (max-width: 755px){
+
+    #left-footer-ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+    }
+    #right-footer-ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 615px){
+    .main-search .searchbar{
+        width: 17rem;
+    }
+}
+
+@media only screen and (max-width: 465px){
+    #left-footer-ul{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-left: 0;
+        gap: 4px;
+    }
+    #right-footer-ul{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        margin-right: 0;
+        gap: 0.7rem;
+    }
+
+    button{
+        display: none;
+    }
+
+    .main-search .searchbar{
+        width: 13rem;
+        padding: 0.6rem;
+    }
+
+    .google-logo img{
+        width: 13rem;
+        height: 100%;
+    }
+
+    #nav-ul{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nav-container #g-logo{
+        width: 2.8rem;
+    }
+
+    .nav-container .nav-menu{
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.2rem;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 420px){
+    .main-search .searchbar{
+        width: 12rem;
+        padding: 0.5rem;
+    }
+    .input-container #keyboard, #camera-icon{
+        display: none;
+    }
+    .top-footer p{
+        font-size: 12px;
+    }
+    .bottom-footer ul{
+        font-size: 12px;
+    }
+    .google-logo img{
+        width: 13rem;
+        height: 100%;
+    }
+
+    #nav-ul{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nav-container #g-logo{
+        width: 2.8rem;
+    }
+
+    .nav-container .nav-menu{
+        width: 1.2rem;
+        height: 1.2rem;
+        margin-right: 0.2rem;
+        cursor: pointer;
+    }
+      
+}
+
+@media only screen and (max-width: 320px){
+    .nav-container #g-logo{
+        width: 3rem;
+    }
+    .top-footer{
+        margin: 10px;
+    }
+    .bottom-footer{
+        margin: 10px;
+        font-size: 10px;
+    }
+}
